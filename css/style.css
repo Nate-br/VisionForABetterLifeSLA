@@ -83,12 +83,32 @@ header .container {
     margin: 0;
 }
 
+/* Mobile Menu Toggle */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background: #2c3e50;
+    margin: 3px 0;
+    transition: 0.3s;
+    border-radius: 2px;
+}
+
+/* Navigation */
 nav ul {
     display: flex;
     list-style: none;
     gap: 15px;
     flex-wrap: wrap;
     justify-content: center;
+    margin: 0;
+    padding: 0;
 }
 
 nav a {
@@ -97,10 +117,108 @@ nav a {
     font-weight: 500;
     font-size: 0.9rem;
     transition: color 0.3s ease;
+    padding: 8px 12px;
+    border-radius: 20px;
 }
 
 nav a:hover {
     color: #3498db;
+    background: rgba(52, 152, 219, 0.1);
+}
+
+/* Mobile Navigation */
+@media (max-width: 992px) {
+    .menu-toggle {
+        display: flex;
+    }
+    
+    nav {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background: white;
+        transition: 0.3s;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        z-index: 999;
+    }
+    
+    nav.active {
+        left: 0;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        gap: 0;
+        padding: 20px;
+        align-items: stretch;
+    }
+    
+    nav li {
+        margin: 5px 0;
+    }
+    
+    nav a {
+        display: block;
+        padding: 15px 20px;
+        border-radius: 0;
+        border-bottom: 1px solid #eee;
+        font-size: 1rem;
+    }
+    
+    nav a:hover {
+        background: #3498db;
+        color: white;
+        border-radius: 5px;
+    }
+    
+    header .container {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 768px) {
+    header .container {
+        padding: 10px 0;
+    }
+    
+    .logo-img {
+        height: 40px;
+        max-width: 50px;
+    }
+    
+    .logo-text h1 {
+        font-size: 1.1rem;
+    }
+    
+    .logo-text p {
+        font-size: 0.8rem;
+    }
+}
+
+/* Desktop Navigation - Compact */
+@media (min-width: 993px) and (max-width: 1200px) {
+    nav ul {
+        gap: 10px;
+        flex-wrap: nowrap;
+    }
+    
+    nav a {
+        font-size: 0.85rem;
+        padding: 6px 10px;
+    }
+}
+
+@media (min-width: 1201px) {
+    nav ul {
+        gap: 15px;
+    }
+    
+    nav a {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
 }
 
 /* Hero Section */
@@ -676,4 +794,5 @@ footer {
 .hero-content p {
     color: white !important;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.7) !important;
+
 }
