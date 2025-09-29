@@ -65,22 +65,38 @@ header .container {
 }
 
 .logo-img {
-    height: 50px;
+    height: 60px; /* Increased from 50px to 60px */
     width: auto;
-    max-width: 60px;
+    max-width: 70px; /* Increased from 60px to 70px */
     object-fit: contain;
 }
 
 .logo-text h1 {
-    font-size: 1.3rem;
+    font-size: 1.4rem; /* Increased from 1.3rem to 1.4rem */
     color: #2c3e50;
     margin: 0;
 }
 
 .logo-text p {
-    font-size: 0.9rem;
+    font-size: 0.95rem; /* Increased from 0.9rem to 0.95rem */
     color: #7f8c8d;
     margin: 0;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .logo-img {
+        height: 50px; /* Slightly larger than before */
+        max-width: 60px;
+    }
+    
+    .logo-text h1 {
+        font-size: 1.2rem;
+    }
+    
+    .logo-text p {
+        font-size: 0.85rem;
+    }
 }
 
 /* Mobile Menu Toggle */
@@ -801,3 +817,4 @@ footer {
 .about-img, .logo-img {
     loading: lazy;
 }
+
