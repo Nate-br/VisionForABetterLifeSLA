@@ -6,60 +6,104 @@
     <title>Vision for a Better Life | ቪዝን ለተሻለ ህይወት | Fayyinaa fi Jaarraa</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- Add to <head> section -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'GA_TRACKING_ID');
-</script>
-    <!-- Add to <head> section -->
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Ethiopic:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Add to <head> section -->
-<link rel="icon" type="image/png" href="images/favicon.png">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Ethiopic:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Favicon - Make sure this file exists -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    
+    <!-- Google Analytics - Replace GA_TRACKING_ID with your actual ID -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'GA_TRACKING_ID');
+    </script>
+    
+    <style>
+        /* Force Logo to be Bigger - This will override all other styles */
+        .logo-img {
+            height: 70px !important;
+            width: auto !important;
+            max-width: 80px !important;
+            object-fit: contain !important;
+            padding: 8px !important;
+            background: rgba(255,255,255,0.2) !important;
+            border-radius: 12px !important;
+            border: 2px solid rgba(52, 152, 219, 0.3) !important;
+        }
+        
+        .logo-text h1 {
+            font-size: 1.6rem !important;
+            color: #2c3e50 !important;
+            margin: 0 !important;
+            font-weight: 700 !important;
+        }
+        
+        .logo-text p {
+            font-size: 1.1rem !important;
+            color: #7f8c8d !important;
+            margin: 0 !important;
+        }
+        
+        /* Mobile override */
+        @media (max-width: 768px) {
+            .logo-img {
+                height: 55px !important;
+                max-width: 65px !important;
+                padding: 5px !important;
+            }
+            
+            .logo-text h1 {
+                font-size: 1.3rem !important;
+            }
+            
+            .logo-text p {
+                font-size: 0.9rem !important;
+            }
+        }
+    </style>
 </head>
   
 <body>
-   
     <!-- Language Selector -->
     <div class="language-selector">
         <button onclick="changeLanguage('en')" class="lang-btn active" id="en-btn">English</button>
         <button onclick="changeLanguage('am')" class="lang-btn" id="am-btn">አማርኛ</button>
         <button onclick="changeLanguage('om')" class="lang-btn" id="om-btn">Afaan Oromoo</button>
     </div>
-<!-- Add to <head> section -->
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Ethiopic:wght@400;500;600;700&display=swap" rel="stylesheet">
+
     <!-- Header -->
-<header>
-    <div class="container">
-        <div class="logo">
-            <!-- In your index.html, find this line and update it: -->
-<img src="images/logo.png" alt="Church Logo" class="logo-img" style="height: 70px; width: auto; max-width: 80px;">
-            <div class="logo-text">
-                <h1 id="site-title">Vision for a Better Life</h1>
-                <p id="site-subtitle">Mehal Adama MKC</p>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.png" alt="Church Logo" class="logo-img">
+                <div class="logo-text">
+                    <h1 id="site-title">Vision for a Better Life</h1>
+                    <p id="site-subtitle">Mehal Adama MKC</p>
+                </div>
             </div>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="#home" id="nav-home">Home</a></li>
+                    <li><a href="#about" id="nav-about">About Us</a></li>
+                    <li><a href="#mission" id="nav-mission">Mission</a></li>
+                    <li><a href="#objectives" id="nav-objectives">Objectives</a></li>
+                    <li><a href="#services" id="nav-services">Services</a></li>
+                    <li><a href="#finance" id="nav-finance">Finance</a></li>
+                    <li><a href="#membership" id="nav-membership">Membership</a></li>
+                    <li><a href="#contact" id="nav-contact">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-        <div class="menu-toggle" id="menuToggle">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <nav id="mainNav">
-            <ul>
-                <li><a href="#home" id="nav-home">Home</a></li>
-                <li><a href="#about" id="nav-about">About Us</a></li>
-                <li><a href="#mission" id="nav-mission">Mission</a></li>
-                <li><a href="#objectives" id="nav-objectives">Objectives</a></li>
-                <li><a href="#services" id="nav-services">Services</a></li>
-                <li><a href="#finance" id="nav-finance">Finance</a></li>
-                <li><a href="#membership" id="nav-membership">Membership</a></li>
-                <li><a href="#contact" id="nav-contact">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
+    </header>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
@@ -75,74 +119,75 @@
         </div>
     </section>
 
-   <!-- About Section -->
-<section id="about" class="about">
-    <div class="container">
-        <h2 id="about-title">About Us</h2>
-        <div class="about-content">
-            <div class="about-text">
-                <div class="values">
-                    <h3 id="values-title">Our Core Values</h3>
-                    <div class="values-list">
-                        <div class="value-item">
-                            <div class="value-icon">🧠</div>
-                            <div class="value-content">
-                                <h4 id="value1-title">Self-reliance</h4>
-                                <p id="value1-desc">Encourages individuals to take initiative for their own development. Builds self-confidence and resilience by learning to solve problems independently. Often associated with community development, where people work together to improve their situation.</p>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 id="about-title">About Us</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="values">
+                        <h3 id="values-title">Our Core Values</h3>
+                        <div class="values-list">
+                            <div class="value-item">
+                                <div class="value-icon">🧠</div>
+                                <div class="value-content">
+                                    <h4 id="value1-title">Self-reliance</h4>
+                                    <p id="value1-desc">Encourages individuals to take initiative for their own development. Builds self-confidence and resilience by learning to solve problems independently. Often associated with community development, where people work together to improve their situation.</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="value-item">
-                            <div class="value-icon">🙋🏾</div>
-                            <div class="value-content">
-                                <h4 id="value2-title">Taking personal responsibility</h4>
-                                <p id="value2-desc">Encourages accountability for each person's actions and decisions. Develops ethical behavior, discipline, and personal growth. Strengthens society by encouraging everyone to make a positive contribution.</p>
+                            <div class="value-item">
+                                <div class="value-icon">🙋🏾</div>
+                                <div class="value-content">
+                                    <h4 id="value2-title">Taking personal responsibility</h4>
+                                    <p id="value2-desc">Encourages accountability for each person's actions and decisions. Develops ethical behavior, discipline, and personal growth. Strengthens society by encouraging everyone to make a positive contribution.</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="value-item">
-                            <div class="value-icon">3️⃣</div>
-                            <div class="value-content">
-                                <h4 id="value3-title">Promoting a culture of democracy</h4>
-                                <p id="value3-desc">Ensures participation, transparency, and fairness in governance. Encourages respect for diverse opinions and peaceful resolution of disputes. Respects the rule of law, human rights, and civic participation.</p>
+                            <div class="value-item">
+                                <div class="value-icon">3️⃣</div>
+                                <div class="value-content">
+                                    <h4 id="value3-title">Promoting a culture of democracy</h4>
+                                    <p id="value3-desc">Ensures participation, transparency, and fairness in governance. Encourages respect for diverse opinions and peaceful resolution of disputes. Respects the rule of law, human rights, and civic participation.</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="value-item">
-                            <div class="value-icon">⚖️</div>
-                            <div class="value-content">
-                                <h4 id="value4-title">Equality</h4>
-                                <p id="value4-desc">Advocates for equal rights and opportunities. Works to eliminate discrimination and social injustice. It does everything necessary to promote unity and respect among its members.</p>
+                            <div class="value-item">
+                                <div class="value-icon">⚖️</div>
+                                <div class="value-content">
+                                    <h4 id="value4-title">Equality</h4>
+                                    <p id="value4-desc">Advocates for equal rights and opportunities. Works to eliminate discrimination and social injustice. It does everything necessary to promote unity and respect among its members.</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="value-item">
-                            <div class="value-icon">🎯</div>
-                            <div class="value-content">
-                                <h4 id="value5-title">Equity</h4>
-                                <p id="value5-desc">It focuses on the fair distribution of resources and opportunities. It helps to bridge gaps that arise due to historical or systemic flaws.</p>
+                            <div class="value-item">
+                                <div class="value-icon">🎯</div>
+                                <div class="value-content">
+                                    <h4 id="value5-title">Equity</h4>
+                                    <p id="value5-desc">It focuses on the fair distribution of resources and opportunities. It helps to bridge gaps that arise due to historical or systemic flaws.</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="value-item">
-                            <div class="value-icon">🤝</div>
-                            <div class="value-content">
-                                <h4 id="value6-title">Unity</h4>
-                                <p id="value6-desc">It emphasizes mutual support and collective action. It creates a sense of belonging and a common purpose. It promotes social justice and cooperation.</p>
+                            <div class="value-item">
+                                <div class="value-icon">🤝</div>
+                                <div class="value-content">
+                                    <h4 id="value6-title">Unity</h4>
+                                    <p id="value6-desc">It emphasizes mutual support and collective action. It creates a sense of belonging and a common purpose. It promotes social justice and cooperation.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="about-images">
-                <div class="image-container">
-                    <img src="images/family.jpg" alt="Christian Community" class="about-img">
-                </div>
-                <div class="image-container">
-                    <img src="images/community.jpg" alt="Church Community" class="about-img">
-                </div>
-                <div class="image-container">
-                    <img src="images/church.jpg" alt="Church Building" class="about-img">
+                <div class="about-images">
+                    <div class="image-container">
+                        <img src="images/family.jpg" alt="Christian Community" class="about-img">
+                    </div>
+                    <div class="image-container">
+                        <img src="images/community.jpg" alt="Church Community" class="about-img">
+                    </div>
+                    <div class="image-container">
+                        <img src="images/church.jpg" alt="Church Building" class="about-img">
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+
     <!-- Mission Section -->
     <section id="mission" class="mission">
         <div class="container">
@@ -377,9 +422,44 @@
     </div>
 
     <script src="js/script.js"></script>
+    
+    <!-- Mobile Menu Toggle Script -->
+    <script>
+        // Mobile Menu Toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menuToggle');
+            const mainNav = document.getElementById('mainNav');
+            
+            if (menuToggle && mainNav) {
+                menuToggle.addEventListener('click', function() {
+                    mainNav.classList.toggle('active');
+                    
+                    // Animate hamburger icon
+                    const spans = menuToggle.querySelectorAll('span');
+                    if (mainNav.classList.contains('active')) {
+                        spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+                        spans[1].style.opacity = '0';
+                        spans[2].style.transform = 'rotate(-45deg) translate(7px, -6px)';
+                    } else {
+                        spans[0].style.transform = 'none';
+                        spans[1].style.opacity = '1';
+                        spans[2].style.transform = 'none';
+                    }
+                });
+                
+                // Close menu when clicking on links
+                const navLinks = mainNav.querySelectorAll('a');
+                navLinks.forEach(link => {
+                    link.addEventListener('click', function() {
+                        mainNav.classList.remove('active');
+                        const spans = menuToggle.querySelectorAll('span');
+                        spans[0].style.transform = 'none';
+                        spans[1].style.opacity = '1';
+                        spans[2].style.transform = 'none';
+                    });
+                });
+            }
+        });
+    </script>
 </body>
-
 </html>
-
-
-
