@@ -22,12 +22,49 @@
       gtag('config', 'GA_TRACKING_ID');
     </script>
     
- <div class="logo">
-            <img src="images/logo.png" alt="Church Logo" class="logo-img" style="height: 70px; width: auto; max-width: 80px;">
-            <div class="logo-text">
-                <h1 id="site-title">Vision for a Better Life</h1>
-                <p id="site-subtitle">Mehal Adama MKC</p>
-            </div>
+    <style>
+        /* Force Logo to be Bigger - Remove Box */
+        .logo-img {
+            height: 70px !important;
+            width: auto !important;
+            max-width: 80px !important;
+            object-fit: contain !important;
+            padding: 0 !important;
+            background: transparent !important;
+            border-radius: 0 !important;
+            border: none !important;
+            box-shadow: none !important;
+        }
+        
+        .logo-text h1 {
+            font-size: 1.6rem !important;
+            color: #2c3e50 !important;
+            margin: 0 !important;
+            font-weight: 600 !important;
+        }
+        
+        .logo-text p {
+            font-size: 1.0rem !important;
+            color: #7f8c8d !important;
+            margin: 0 !important;
+        }
+        
+        /* Mobile override */
+        @media (max-width: 768px) {
+            .logo-img {
+                height: 55px !important;
+                max-width: 65px !important;
+            }
+            
+            .logo-text h1 {
+                font-size: 1.3rem !important;
+            }
+            
+            .logo-text p {
+                font-size: 0.9rem !important;
+            }
+        }
+    </style>
 </head>
   
 <body>
@@ -426,4 +463,3 @@
     </script>
 </body>
 </html>
-
