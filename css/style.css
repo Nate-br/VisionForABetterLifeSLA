@@ -65,20 +65,24 @@ header .container {
 }
 
 .logo-img {
-    height: 60px; /* Increased from 50px to 60px */
+    height: 65px; /* Even bigger */
     width: auto;
-    max-width: 70px; /* Increased from 60px to 70px */
+    max-width: 75px;
     object-fit: contain;
+    padding: 5px; /* Small padding for better visual spacing */
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
 }
 
 .logo-text h1 {
-    font-size: 1.4rem; /* Increased from 1.3rem to 1.4rem */
+    font-size: 1.5rem;
     color: #2c3e50;
     margin: 0;
+    font-weight: 600;
 }
 
 .logo-text p {
-    font-size: 0.95rem; /* Increased from 0.9rem to 0.95rem */
+    font-size: 1rem;
     color: #7f8c8d;
     margin: 0;
 }
@@ -817,4 +821,5 @@ footer {
 .about-img, .logo-img {
     loading: lazy;
 }
+
 
