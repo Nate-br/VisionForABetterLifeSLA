@@ -335,7 +335,7 @@ const translations = {
         "footer-mission": "Erga",
         "footer-services": "Tajaajila",
         "footer-contact": "Qunnamaa",
-        "copyright-text": "© 2025 Fayyinaa fi Jaarraa Irraa Hirmaachuu Keessatti Dhugaa Fudhachuun Maatii Keessanii Gochuu. Kan Nuti Naatinaal Sisaay jedhanii hojjenne. Hundaan mirkanaa'aa.",
+        "copyright-text": "© 2025 Fayyinaa fi Jaarraa Irraa Hirmaachuu Keessatti Dhugaa Fudhachuun Maatii Keessanii Gochuu. Kan Nuti Natinael Sisaay jedhanii hojjenne. Hundaan mirkanaa'aa.",
         
         // Modal
         "modal-title": "Booda Dha!",
@@ -416,4 +416,5 @@ document.querySelectorAll('nav a').forEach(anchor => {
             });
         }
     });
+
 });
