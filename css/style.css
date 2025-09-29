@@ -64,16 +64,16 @@ header .container {
     gap: 15px;
 }
 
-/* Force Logo to be Bigger - OVERRIDE ALL OTHER STYLES */
+/* BIGGER LOGO - This is the only logo rule you need */
 .logo-img {
     height: 70px !important;
     width: auto !important;
     max-width: 80px !important;
-    object-fit: contain !important;
-    padding: 8px !important;
-    background: rgba(255,255,255,0.2) !important;
-    border-radius: 12px !important;
-    border: 2px solid rgba(52, 152, 219, 0.3) !important;
+    object-fit: contain;
+    padding: 8px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 12px;
+    border: 2px solid rgba(52, 152, 219, 0.3);
 }
 
 .logo-text h1 {
@@ -89,6 +89,22 @@ header .container {
     margin: 0 !important;
 }
 
+/* Mobile override */
+@media (max-width: 768px) {
+    .logo-img {
+        height: 55px !important;
+        max-width: 65px !important;
+        padding: 5px !important;
+    }
+    
+    .logo-text h1 {
+        font-size: 1.3rem !important;
+    }
+    
+    .logo-text p {
+        font-size: 0.9rem !important;
+    }
+}
 /* Mobile override */
 @media (max-width: 768px) {
     .logo-img {
@@ -839,6 +855,7 @@ footer {
 .about-img, .logo-img {
     loading: lazy;
 }
+
 
 
 
