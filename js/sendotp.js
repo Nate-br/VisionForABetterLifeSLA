@@ -1,40 +1,39 @@
-// File: netlify/functions/send-otp.js
+// This is the Vercel-compatible version of the function.
+// It uses the standard `request`, `response` objects.
 
-exports.handler = async function(event, context) {
+export default async function handler(request, response) {
     // Only allow POST requests
-    if (event.httpMethod !== 'POST') {
-        return { statusCode: 405, body: 'Method Not Allowed' };
+    if (request.method !== 'POST') {
+        return response.status(405).json({ error: 'Method Not Allowed' });
     }
 
     try {
-        const { chatId, otp } = JSON.parse(event.body);
-        const botToken = process.env.TELEGRAM_BOT_TOKEN; // Securely get token from environment variables
+        // Vercel automatically parses the JSON body
+        const { chatId, otp } = request.body;
+        const botToken = process.env.8357889193:AAHsYYveSew5tqN9k_-N2nkGeEDPx-0m7Cw; // Get token securely
 
         if (!chatId || !otp || !botToken) {
-            return { statusCode: 400, body: 'Missing required parameters.' };
+            return response.status(400).json({ error: 'Missing required parameters.' });
         }
         
         const message = `Your Vision for a Better Life verification code is: ${otp}`;
         const telegramUrl = `https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(message)}`;
 
-        const response = await fetch(telegramUrl);
-        const data = await response.json();
+        // Use fetch to send the message
+        const telegramResponse = await fetch(telegramUrl);
+        const data = await telegramResponse.json();
 
         if (!data.ok) {
-            // Telegram API returned an error
+            // If Telegram API returns an error
             throw new Error(data.description);
         }
 
-        return {
-            statusCode: 200,
-            body: JSON.stringify({ message: 'OTP sent successfully!' })
-        };
+        // Send a success response back to the front end
+        return response.status(200).json({ message: 'OTP sent successfully!' });
 
     } catch (error) {
         console.error('Error sending OTP:', error);
-        return {
-            statusCode: 500,
-            body: JSON.stringify({ error: 'Failed to send OTP.' })
-        };
+        // Send a server error response back to the front end
+        return response.status(500).json({ error: 'Failed to send OTP.' });
     }
-};
+}
