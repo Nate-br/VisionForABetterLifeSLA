@@ -10,17 +10,8 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Ethiopic:wght@400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Favicon - Make sure this file exists -->
+    <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/favicon.png">
-    
-    <!-- Google Analytics - Replace GA_TRACKING_ID with your actual ID -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'GA_TRACKING_ID');
-    </script>
     
     <style>
         /* Force Logo to be Bigger - Remove Box */
@@ -100,6 +91,7 @@
                     <li><a href="#finance" id="nav-finance">Finance</a></li>
                     <li><a href="#membership" id="nav-membership">Membership</a></li>
                     <li><a href="#contact" id="nav-contact">Contact</a></li>
+                    <li><a href="login.html" id="nav-login">Member Login</a></li>
                 </ul>
             </nav>
         </div>
@@ -115,6 +107,9 @@
             <div class="cta-buttons">
                 <button class="btn-primary" id="apply-loan" onclick="showComingSoon()">Apply for Loan</button>
                 <button class="btn-secondary" id="open-account" onclick="showComingSoon()">Open Savings Account</button>
+                <a href="login.html" class="btn-secondary">
+                    <i class="fas fa-user-circle"></i> Member Login
+                </a>
             </div>
         </div>
     </section>
@@ -371,6 +366,10 @@
                         <i class="fas fa-clock"></i>
                         <span id="hours-text">Office Hours: Monday-Friday 8AM-4PM</span>
                     </div>
+                    <div class="contact-item">
+                        <i class="fas fa-user-circle"></i>
+                        <span><a href="login.html" style="color: #3498db; text-decoration: none;">Member Login Portal</a></span>
+                    </div>
                 </div>
                 <div class="contact-form">
                     <form id="contactForm">
@@ -398,6 +397,7 @@
                     <a href="#mission" id="footer-mission">Mission</a>
                     <a href="#services" id="footer-services">Services</a>
                     <a href="#contact" id="footer-contact">Contact</a>
+                    <a href="login.html" id="footer-login">Member Login</a>
                 </div>
                 <div class="social-links">
                     <a href="#"><i class="fab fa-facebook"></i></a>
